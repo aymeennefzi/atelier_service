@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <td>id</td>
+    <td>code</td>
+    <td>Libelle</td>
+    <td>prix unitaire</td>
+    <td>TauxTVA</td>
+    <td>Action</td>
+  </tr>
+  <tr *ngFor="let product of Listproducts">
+    <td>{{product.id}}</td>
+    <td>{{product.code}}</td>
+    <td>{{product.libelle}}</td>
+    <td>{{product.prixunitaire}}</td>
+    <td>{{product.tauxTva}}</td>
+    <td><button (click)="calculproduct(product.libelle)">Calculer</button></td>
+  </tr>
+</table>
+<p>Nombre de produits avec le même libellé : {{ productCount }}</p>
